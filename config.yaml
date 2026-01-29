@@ -1,0 +1,24 @@
+paths:
+  seg_model: "models/best.pt"
+  cls_model: "yolo11n-cls.pt"
+
+names:
+  seg_class_name: "book spine"
+
+inference:
+  conf_default: 0.20
+  iou_default: 0.30
+  quality: "balanced"
+  imgsz_fast: 640
+  imgsz_balanced: 768
+  imgsz_quality: 960
+  roi_mode_default: "books_band"
+  retina_masks: false
+  roi_band_padding: 0.05
+  per_shelf_threshold_px: 25
+  per_shelf_threshold_frac: 0.6
+  noise_filters_default: true
+  min_mask_area_frac: 0.0005
+  min_bbox_w_px: 2
+
+oom_fallback: true
